@@ -1,5 +1,4 @@
 import React from 'react'
-import { ChatEngine } from 'react-chat-engine';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './App.css';
 import { AuthProvider } from "./contexts/AuthContext"
