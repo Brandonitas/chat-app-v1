@@ -6,6 +6,7 @@ import { auth } from '../firebase';
 import { useAuth } from '../contexts/AuthContext';
 import axios from 'axios';
 import ChatFeed from './ChatFeed';
+import { LogoutOutlined } from '@ant-design/icons';
 
 
 const Chats = () => {
@@ -68,10 +69,10 @@ const Chats = () => {
         <div className='chats-page'>
             <div className='nav-bar'>
                 <div className='logo-tab'>
-                    Unichat
+                    Chat
                 </div>
                 <div onClick={handleLogout} className='logout-tab'>
-                    Logout
+                    <LogoutOutlined />
                 </div>
             </div>
             <ChatEngine 
