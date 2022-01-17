@@ -8,15 +8,17 @@
   
   .ce-chat-list {
     background-color: rgb(240, 240, 240) !important;
+    overflow: hidden !important;
+    border-right: none !important;
   }
   
   .ce-chats-container {
-    background-color: rgb(240, 240, 240) !important;
+    background-color: white !important;
   }
   
   .ce-active-chat-card {
-    background-color: #cabcdc !important;
-    border: 4px solid #cabcdc !important;
+    background-color: #f4f7fe !important;
+    border: 4px solid #f4f7fe !important;
     border-radius: 0px !important;
   }
   
@@ -29,13 +31,14 @@
   }
   
   .ce-text-input {
-    border-radius: 6px !important;
+    border-radius: 10px !important;
     border: 1px solid #3b2a50 !important;
+    margin-top: 2rem;
   }
   
   .ce-primary-button {
-    border-radius: 6px !important;
-    background-color: #7554a0 !important;
+    border-radius: 50px !important;
+    background-color: #f36bab !important;
     position: relative;
     bottom: 1px;
   }
@@ -46,7 +49,7 @@
   }
   
   .ce-settings {
-    background-color: rgb(240, 240, 240) !important;
+    background-color: white !important;
   }
   
   .ce-autocomplete-input {
@@ -65,7 +68,7 @@
   }
   
   .ce-chat-avatars-row {
-    display: none !important;
+    
   }
   
   /* CUSTOM FEED */
@@ -73,8 +76,8 @@
   .chat-feed {
     height: 100%;
     width: 100%;
-    overflow: scroll;
-    background-color: rgb(240, 240, 240);
+    overflow-y: scroll;
+    background-color: #f4f7fe;
   }
   
   .chat-title-container {
@@ -84,13 +87,13 @@
   }
   
   .chat-title {
-    color: #7554a0;
+    color: black;
     font-weight: 800;
     font-size: 24px;
   }
   
   .chat-subtitle {
-    color: #7554a0;
+    color: black;
     font-weight: 600;
     font-size: 12px;
     padding-top: 4px;
@@ -122,8 +125,9 @@
   .message {
     padding: 12px;
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 10px;
     max-width: 60%;
+    box-shadow: 1px -1px 17px 12px rgba(217,217,217,0.33);
   }
   
   .message-image {
@@ -158,7 +162,7 @@
     bottom: 0px;
     width: calc(100% - 36px);
     padding: 18px;
-    background-color: rgb(240, 240, 240);
+    background-color: #f4f7fe;
   }
   
   .message-form {
@@ -217,8 +221,7 @@
   .wrapper {
     height: 100vh;
       width: 100%;
-    background: rgb(117,84,160);
-    background: linear-gradient(90deg, rgba(117,84,160,1) 7%, rgba(117,84,160,1) 17%, rgba(106,95,168,1) 29%, rgba(99,103,174,1) 44%, rgba(87,116,184,1) 66%, rgba(70,135,198,1) 83%, rgba(44,163,219,1) 96%, rgba(22,188,237,1) 100%, rgba(0,212,255,1) 100%);  
+    background: #2156be;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,11 +242,7 @@
     outline: none;
     margin-bottom: 25px;
   }
-  
-  .form {
-    width: 400px;
-  }
-  
+
   .title {
     text-align: center;
     color: white;
@@ -253,14 +252,15 @@
   }
   
   .button {
-    border-radius: 4px;
+    border-radius: 8px;
     border: none;
-    background-color: white;
-    color: black;
+    background-color: #f36bab;
+    color: white;
     text-align: center;
     text-transform: uppercase;
-    font-size: 22px;
-    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 46px;
     width: 200px;
     transition: all 0.4s;
     cursor: pointer;
@@ -287,4 +287,104 @@
   .button:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+
+
+
+
+.chats-page {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .nav-bar {
+    width: 100%;
+    height: 66px;
+    background-color: #002766;
+  }
+  
+  .logo-tab {
+    position: absolute;
+    left: 22px;
+    top: 12px;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .logout-tab {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+  
+
+
+  #login-card {
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    width: 420px;
+    text-align: center;
+    background-color: white;
+    border-radius: 22px;
+  }
+  
+  .login-button {
+    cursor: pointer;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .google {
+    background-color: #4285f4;
+    color: white;
+    width: 90%;
+    cursor: no-drop;
+    opacity: 0.5;
+    background: #CCC;
+  }
+
+
+  .separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: auto;
+    color: #c9c9c9;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #c9c9c9;
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: .25em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .25em;
   }
